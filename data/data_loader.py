@@ -27,7 +27,7 @@ def load_config(path="config.yaml"):
 
 
 def tokenize(texts):
-    return TOKENIZER(texts, padding=True, truncation=True, max_length=128)
+    return TOKENIZER(texts, padding="max_length", truncation=True, max_length=128)
 
 
 def make_dataloader(texts, labels, batch_size=32, shuffle=False):
