@@ -2,6 +2,7 @@ import torch
 
 
 def evaluate_model(model, loader, device):
+    """Given a model, loader, and device evaluates loss and accuracy"""
     model.eval()
     total_loss = 0
     correct = 0
@@ -25,6 +26,7 @@ def evaluate_model(model, loader, device):
 
 
 def evaluate_all_tasks(model, test_loaders, device):
+    """For each of the test loaders, evaluates accuracy, and appends result"""
     results = {}
     for task_name, loader in test_loaders.items():
         model.set_task(task_name)

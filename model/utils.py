@@ -2,6 +2,7 @@ import torch
 
 
 def train_epoch(model, loader, optimizer, device):
+    """generic training function"""
     model.train()
     total_loss = 0
     correct = 0

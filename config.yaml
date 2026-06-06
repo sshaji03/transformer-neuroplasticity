@@ -2,13 +2,19 @@ seed: 42
 train_size: 5000
 memory_size: 500
 test_size: 500
-epochs: 3
-learning_rate: 0.001
+epochs:
+  - 3
+  - 5
+  - 10
+learning_rate: 0.00002
 
 cwi_magnitude_weight: 0.33
 cwi_current_grad_weight: 0.33
 cwi_prev_grad_weight: 0.33
-cwi_top_k: 0.5
+cwi_top_k:
+  - 0.6
+  - 0.7
+  - 0.8
 
 tasks:
   - name: sst2
